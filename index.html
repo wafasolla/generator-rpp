@@ -1,4 +1,68 @@
-<!-- DESAIN PEMBELAJARAN -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generator RPP Pembelajaran Mendalam 2025</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container no-print">
+    <h2>Generator RPP Pembelajaran Mendalam (CP 2025)</h2>
+    <p>Diadaptasi dari BSKAP No. 046/H/KR/2025 & Template RPP Pembelajaran Mendalam</p>
+    <form id="rppForm">
+      
+      <!-- DATA UMUM -->
+      <fieldset>
+        <legend>1. Informasi Umum</legend>
+        <div class="grid">
+          <div>
+            <label>Nama Sekolah:</label>
+            <input type="text" id="sekolah" placeholder="SMA Negeri 1..." required>
+          </div>
+          <div>
+            <label>Nama Guru:</label>
+            <input type="text" id="namaGuru" placeholder="Nama Guru, S.Pd." required>
+          </div>
+          <div>
+            <label>Mata Pelajaran:</label>
+            <input type="text" id="mapel" placeholder="Bahasa Indonesia / IPA..." required>
+          </div>
+          <div>
+            <label>Kelas / Semester / Fase:</label>
+            <input type="text" id="kelas" placeholder="Kelas VII / Ganjil / Fase D" required>
+          </div>
+          <div>
+            <label>Alokasi Waktu:</label>
+            <input type="text" id="alokasiWaktu" placeholder="2 x 45 Menit" required>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- IDENTIFIKASI -->
+      <fieldset>
+        <legend>2. Identifikasi Pembelajaran Mendalam</legend>
+        <label>Identifikasi Peserta Didik (Kesiapan, Minat, Kebutuhan):</label>
+        <textarea id="identifikasiSiswa" rows="2" placeholder="Siswa memiliki pengetahuan dasar..."></textarea>
+
+        <label>Identifikasi Materi Pelajaran (Relevansi, Kontekstual, Karakter):</label>
+        <textarea id="identifikasiMateri" rows="2" placeholder="Materi ini relevan dengan kehidupan sehari-hari..."></textarea>
+
+        <label>Dimensi Profil Lulusan (DPL) yang Dicapai:</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" class="dpl" value="DPL 1: Keimanan dan ketakwaan terhadap Tuhan YME"> DPL 1: Keimanan & Takwa</label>
+          <label><input type="checkbox" class="dpl" value="DPL 2: Kewargaan"> DPL 2: Kewargaan</label>
+          <label><input type="checkbox" class="dpl" value="DPL 3: Penalaran Kritis"> DPL 3: Penalaran Kritis</label>
+          <label><input type="checkbox" class="dpl" value="DPL 4: Kreativitas"> DPL 4: Kreativitas</label>
+          <label><input type="checkbox" class="dpl" value="DPL 5: Kolaborasi"> DPL 5: Kolaborasi</label>
+          <label><input type="checkbox" class="dpl" value="DPL 6: Kemandirian"> DPL 6: Kemandirian</label>
+          <label><input type="checkbox" class="dpl" value="DPL 7: Kesehatan"> DPL 7: Kesehatan</label>
+          <label><input type="checkbox" class="dpl" value="DPL 8: Komunikasi"> DPL 8: Komunikasi</label>
+        </div>
+      </fieldset>
+
+      <!-- DESAIN PEMBELAJARAN -->
       <fieldset>
         <legend>3. Desain Pembelajaran (CP Terbaru 2025)</legend>
         <label>Capaian Pembelajaran (CP):</label>
@@ -59,6 +123,7 @@
           </div>
         </div>
       </fieldset>
+
       <!-- PENGALAMAN BELAJAR -->
       <fieldset>
         <legend>4. Pengalaman Belajar (Deep Learning)</legend>
@@ -125,3 +190,21 @@
           <option value="Penilaian portofolio hasil karya dan unjuk kerja (performance assessment)">Penilaian portofolio hasil karya & unjuk kerja</option>
         </select>
       </fieldset>
+
+      <button type="button" onclick="generateRPP()">Hasilkan RPP Sekarang</button>
+    </form>
+  </div>
+
+  <!-- AREA OUTPUT RPP (Bisa Dicetak) -->
+  <div class="container" id="outputArea" style="display:none;">
+    <div class="no-print" style="margin-bottom: 20px;">
+      <button class="btn-print" onclick="window.print()">Cetak / Simpan ke PDF</button>
+      <button class="btn-edit" onclick="document.getElementById('outputArea').style.display='none'">Kembali Edit</button>
+    </div>
+    
+    <div id="rppResult" class="print-paper"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
