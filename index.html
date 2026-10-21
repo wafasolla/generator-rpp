@@ -1,68 +1,4 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Generator RPP Pembelajaran Mendalam 2025</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <div class="container no-print">
-    <h2>Generator RPP Pembelajaran Mendalam (CP 2025)</h2>
-    <p>Diadaptasi dari BSKAP No. 046/H/KR/2025 & Template RPP Pembelajaran Mendalam</p>
-    <form id="rppForm">
-      
-      <!-- DATA UMUM -->
-      <fieldset>
-        <legend>1. Informasi Umum</legend>
-        <div class="grid">
-          <div>
-            <label>Nama Sekolah:</label>
-            <input type="text" id="sekolah" placeholder="SD Negeri 1 Barabai Timur" required>
-          </div>
-          <div>
-            <label>Nama Guru:</label>
-            <input type="text" id="namaGuru" placeholder="Wafaul Aulad,S.Pd." required>
-          </div>
-          <div>
-            <label>Mata Pelajaran:</label>
-            <input type="text" id="mapel" placeholder="Bahasa Indonesia / IPA..." required>
-          </div>
-          <div>
-            <label>Kelas / Semester / Fase:</label>
-            <input type="text" id="kelas" placeholder="Kelas V / Ganjil / Fase C" required>
-          </div>
-          <div>
-            <label>Alokasi Waktu:</label>
-            <input type="text" id="alokasiWaktu" placeholder="2 x 35 Menit" required>
-          </div>
-        </div>
-      </fieldset>
-
-      <!-- IDENTIFIKASI -->
-      <fieldset>
-        <legend>2. Identifikasi Pembelajaran Mendalam</legend>
-        <label>Identifikasi Peserta Didik (Kesiapan, Minat, Kebutuhan):</label>
-        <textarea id="identifikasiSiswa" rows="2" placeholder="Siswa memiliki pengetahuan dasar..."></textarea>
-
-        <label>Identifikasi Materi Pelajaran (Relevansi, Kontekstual, Karakter):</label>
-        <textarea id="identifikasiMateri" rows="2" placeholder="Materi ini relevan dengan kehidupan sehari-hari..."></textarea>
-
-        <label>Dimensi Profil Lulusan (DPL) yang Dicapai:</label>
-        <div class="checkbox-group">
-          <label><input type="checkbox" class="dpl" value="DPL 1: Keimanan dan ketakwaan terhadap Tuhan YME"> DPL 1: Keimanan & Takwa</label>
-          <label><input type="checkbox" class="dpl" value="DPL 2: Kewargaan"> DPL 2: Kewargaan</label>
-          <label><input type="checkbox" class="dpl" value="DPL 3: Penalaran Kritis"> DPL 3: Penalaran Kritis</label>
-          <label><input type="checkbox" class="dpl" value="DPL 4: Kreativitas"> DPL 4: Kreativitas</label>
-          <label><input type="checkbox" class="dpl" value="DPL 5: Kolaborasi"> DPL 5: Kolaborasi</label>
-          <label><input type="checkbox" class="dpl" value="DPL 6: Kemandirian"> DPL 6: Kemandirian</label>
-          <label><input type="checkbox" class="dpl" value="DPL 7: Kesehatan"> DPL 7: Kesehatan</label>
-          <label><input type="checkbox" class="dpl" value="DPL 8: Komunikasi"> DPL 8: Komunikasi</label>
-        </div>
-      </fieldset>
-
-      <!-- DESAIN PEMBELAJARAN -->
+<!-- DESAIN PEMBELAJARAN -->
       <fieldset>
         <legend>3. Desain Pembelajaran (CP Terbaru 2025)</legend>
         <label>Capaian Pembelajaran (CP):</label>
@@ -80,70 +16,46 @@
         <div class="grid">
           <div>
             <label>Praktik Pedagogis (Model/Strategi):</label>
-            <input type="text" id="pedagogis" placeholder="Problem Based Learning / Project Based Learning">
+            <select id="pedagogis">
+              <option value="Problem Based Learning (PBL)">Problem Based Learning (PBL)</option>
+              <option value="Project Based Learning (PjBL)">Project Based Learning (PjBL)</option>
+              <option value="Inquiry Based Learning">Inquiry Based Learning</option>
+              <option value="Discovery Learning">Discovery Learning</option>
+              <option value="Pembelajaran Kontekstual (CTL)">Pembelajaran Kontekstual (CTL)</option>
+              <option value="Direct Instruction (Pembelajaran Langsung)">Direct Instruction (Pembelajaran Langsung)</option>
+            </select>
           </div>
+
           <div>
             <label>Kemitraan Pembelajaran:</label>
-            <input type="text" id="kemitraan" placeholder="Orang tua, Guru Mapel Lain, Komunitas...">
+            <select id="kemitraan">
+              <option value="Lingkungan Sekolah & Guru Rumpun/Mapel Lain">Lingkungan Sekolah & Guru Rumpun/Mapel Lain</option>
+              <option value="Orang Tua / Wali Peserta Didik">Orang Tua / Wali Peserta Didik</option>
+              <option value="Masyarakat / Tokoh Masyarakat">Masyarakat / Tokoh Masyarakat</option>
+              <option value="Mitra Profesional / Dunia Usaha & Industri">Mitra Profesional / Dunia Usaha & Industri</option>
+              <option value="Peserta Didik Antar Kelas / Lintas Jenjang">Peserta Didik Antar Kelas / Lintas Jenjang</option>
+            </select>
           </div>
+
           <div>
             <label>Lingkungan Pembelajaran:</label>
-            <input type="text" id="lingkungan" placeholder="Ruang Kelas, LMS, Lingkungan Sekolah...">
+            <select id="lingkungan">
+              <option value="Ruang Kelas Fisik & Budaya Belajar Kolaboratif">Ruang Kelas Fisik & Budaya Belajar Kolaboratif</option>
+              <option value="Ruang Virtual / Learning Management System (LMS)">Ruang Virtual / Learning Management System (LMS)</option>
+              <option value="Kombinasi Ruang Fisik, Virtual, dan Luar Kelas">Kombinasi Ruang Fisik, Virtual, dan Luar Kelas</option>
+              <option value="Lingkungan Luar Sekolah / Alam Sekitar">Lingkungan Luar Sekolah / Alam Sekitar</option>
+            </select>
           </div>
+
           <div>
             <label>Pemanfaatan Digital:</label>
-            <input type="text" id="pemanfaatanDigital" placeholder="Quizizz, Google Classroom, Canva...">
+            <select id="pemanfaatanDigital">
+              <option value="Quizizz, Google Classroom, Canva">Quizizz, Google Classroom, Canva</option>
+              <option value="Perpustakaan Digital, Forum Diskusi Daring">Perpustakaan Digital, Forum Diskusi Daring</option>
+              <option value="Google Forms, Kahoot, LiveWorksheets">Google Forms, Kahoot, LiveWorksheets</option>
+              <option value="YouTube Edukasi, Simulasi Daring (PhET)">YouTube Edukasi, Simulasi Daring (PhET)</option>
+              <option value="AI Tools (ChatGPT/Gemini) & Penilaian Daring">AI Tools (ChatGPT/Gemini) & Penilaian Daring</option>
+            </select>
           </div>
         </div>
       </fieldset>
-
-      <!-- PENGALAMAN BELAJAR -->
-      <fieldset>
-        <legend>4. Pengalaman Belajar (Deep Learning)</legend>
-        <label>Kegiatan Awal (Prinsip: Berkesadaran, Bermakna, Menggembirakan):</label>
-        <textarea id="kegiatanAwal" rows="3" placeholder="Orientasi bermakna, apersepsi kontekstual, motivasi menggembirakan..."></textarea>
-
-        <h4>Kegiatan Inti:</h4>
-        <label>1. Memahami:</label>
-        <textarea id="intiMemahami" rows="3" placeholder="Siswa mendiskusikan konsep dasar secara berkesadaran..."></textarea>
-
-        <label>2. Mengaplikasi:</label>
-        <textarea id="intiMengaplikasi" rows="3" placeholder="Siswa menerapkan konsep pada studi kasus kontekstual..."></textarea>
-
-        <label>3. Merefleksi:</label>
-        <textarea id="intiMerefleksi" rows="3" placeholder="Siswa mengevaluasi proses pemecahan masalah..."></textarea>
-
-        <label>Kegiatan Penutup:</label>
-        <textarea id="kegiatanPenutup" rows="3" placeholder="Umpan balik konstruktif, kesimpulan, dan refleksi..."></textarea>
-      </fieldset>
-
-      <!-- ASESMEN PEMBELAJARAN -->
-      <fieldset>
-        <legend>5. Asesmen Pembelajaran</legend>
-        <label>Asesmen Awal (Diagnostic):</label>
-        <input type="text" id="asesmenAwal" placeholder="Tes lisan / Kuesioner kesiapan...">
-
-        <label>Asesmen Proses (Formaif):</label>
-        <input type="text" id="asesmenProses" placeholder="Observasi diskusi, lembar kerja murid...">
-
-        <label>Asesmen Akhir (Sumatif):</label>
-        <input type="text" id="asesmenAkhir" placeholder="Penilaian produk / Tes tertulis / Presentasi...">
-      </fieldset>
-
-      <button type="button" onclick="generateRPP()">Hasilkan RPP Sekarang</button>
-    </form>
-  </div>
-
-  <!-- AREA OUTPUT RPP (Bisa Dicetak) -->
-  <div class="container" id="outputArea" style="display:none;">
-    <div class="no-print" style="margin-bottom: 20px;">
-      <button class="btn-print" onclick="window.print()">Cetak / Simpan ke PDF</button>
-      <button class="btn-edit" onclick="document.getElementById('outputArea').style.display='none'">Kembali Edit</button>
-    </div>
-    
-    <div id="rppResult" class="print-paper"></div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
