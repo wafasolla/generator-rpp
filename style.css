@@ -1,0 +1,140 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #eef2f5;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  background: white;
+  padding: 30px;
+  margin: 0 auto 30px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h2, h3, h4 {
+  color: #1a365d;
+}
+
+fieldset {
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  background-color: #f8fafc;
+}
+
+legend {
+  font-weight: bold;
+  color: #1e40af;
+  padding: 0 8px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 9px;
+  margin-top: 4px;
+  box-sizing: border-box;
+  border: 1px solid #94a3b8;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0d9488;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #0f766e;
+}
+
+button.btn-print {
+  background-color: #2563eb;
+  width: auto;
+  margin-right: 10px;
+}
+
+button.btn-edit {
+  background-color: #64748b;
+  width: auto;
+}
+
+/* DEEP LEARNING RPP PAPER STYLING */
+.print-paper {
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.4;
+  color: #000;
+}
+
+.rpp-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.rpp-table th, .rpp-table td {
+  border: 1px solid #000;
+  padding: 6px 10px;
+  vertical-align: top;
+  font-size: 11pt;
+}
+
+.section-title {
+  background-color: #e2e8f0;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* MEDIA CETAK (PRINT FORMAT) */
+@media print {
+  body {
+    background-color: white;
+    padding: 0;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .container {
+    box-shadow: none;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .print-paper {
+    padding: 0;
+  }
+}
