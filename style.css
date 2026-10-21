@@ -1,5 +1,5 @@
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #eef2f5;
   margin: 0;
   padding: 20px;
@@ -15,57 +15,102 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-h2, h3, h4 {
+h2 {
   color: #1a365d;
+  margin-top: 0;
+}
+
+p {
+  color: #64748b;
+  margin-bottom: 20px;
 }
 
 fieldset {
   border: 1px solid #cbd5e1;
   border-radius: 6px;
-  padding: 15px 20px;
-  margin-bottom: 20px;
+  padding: 20px;
+  margin-bottom: 25px;
   background-color: #f8fafc;
 }
 
 legend {
   font-weight: bold;
   color: #1e40af;
-  padding: 0 8px;
+  padding: 0 10px;
+  font-size: 1.1em;
 }
 
+/* FORMAT GRID UNTUK FORM */
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 15px;
 }
 
 label {
   display: block;
-  margin-top: 10px;
+  margin-top: 15px;
+  margin-bottom: 5px;
   font-weight: 600;
   font-size: 0.9em;
+  color: #334155;
 }
 
-input[type="text"], textarea {
+/* PENGATURAN INPUT, TEXTAREA, DAN DROPDOWN SELECT */
+input[type="text"], 
+textarea, 
+select {
   width: 100%;
-  padding: 9px;
-  margin-top: 4px;
+  padding: 10px 12px;
   box-sizing: border-box;
   border: 1px solid #94a3b8;
-  border-radius: 4px;
+  border-radius: 6px;
   font-family: inherit;
+  font-size: 14px;
+  background-color: #ffffff;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus, 
+textarea:focus, 
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+select {
+  cursor: pointer;
+  appearance: auto;
+}
+
+h4 {
+  color: #0f172a;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 5px;
 }
 
 .checkbox-group {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.checkbox-group label {
+  margin-top: 0;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
   gap: 8px;
-  margin-top: 8px;
+  cursor: pointer;
 }
 
 button {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   background-color: #0d9488;
   color: white;
   font-size: 16px;
@@ -73,7 +118,8 @@ button {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: background-color 0.2s;
+  margin-top: 10px;
 }
 
 button:hover {
